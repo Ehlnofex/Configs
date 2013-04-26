@@ -22,6 +22,9 @@ set wrapscan
 " Case unsensible search
 set ignorecase
 
+" Force encoding
+set encoding=utf-8
+
 """"""""""
 "
 " Indentation specific configuraton
