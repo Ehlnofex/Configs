@@ -60,12 +60,20 @@ zstyle ':completion:*:*:(^rm):*:*files' ignored-patterns '*?.o' '*?.c~' \
 #
 ####
 
+# Prompt extension
+setopt prompt_subst
+
 autoload -U promptinit
 promptinit
 
-# PS1 environment variable
+# Left prompt definition
 PROMPT="(%n@%M) in (%d) %# "
+
+# Right prompt definition
 RPROMPT="[%T | %W]"
+
+# PS1 environment variable
+export PS1="test ps1"
 
 ##########
 #
