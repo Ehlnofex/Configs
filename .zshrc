@@ -60,7 +60,7 @@ zstyle ':completion:*:*:(^rm):*:*files' ignored-patterns '*?.o' '*?.c~' \
 #
 ####
 
-autoload -U promtinit
+autoload -U promptinit
 promptinit
 
 # PS1 environment variable
