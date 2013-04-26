@@ -64,6 +64,8 @@ autoload -U promptinit
 promptinit
 
 # PS1 environment variable
+PROMPT="(%n@%M) in (%d) %# "
+RPROMPT="[%T | %W]"
 
 ##########
 #
