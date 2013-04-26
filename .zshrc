@@ -124,6 +124,10 @@ alias cp='cp -v'
 alias mv='mv -v'
 alias rm='rm -v'
 
+alias up='cd ..'
+
+alias svim='sudo vim'
+
 ##########
 #
 # Exports
