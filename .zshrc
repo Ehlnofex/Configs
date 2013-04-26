@@ -73,7 +73,7 @@ PROMPT="(%n@%M) in (%d) %# "
 RPROMPT="[%T | %W]"
 
 # PS1 environment variable
-export PS1="test ps1"
+#export PS1="test ps1"
 
 ##########
 #
