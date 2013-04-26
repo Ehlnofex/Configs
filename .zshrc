@@ -1,3 +1,15 @@
+##########
+#  ______ _     _              __          
+# |  ____| |   | |            / _|         
+# | |__  | |__ | |_ __   ___ | |_ _____  __
+# |  __| | '_ \| | '_ \ / _ \|  _/ _ \ \/ /
+# | |____| | | | | | | | (_) | ||  __/>  < 
+# |______|_| |_|_|_| |_|\___/|_| \___/_/\_\
+#                                          
+# Zsh configuration file
+#
+####                                          
+
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _complete _ignored _correct _approximate
