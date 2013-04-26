@@ -76,6 +76,9 @@ HISTSIZE=1000
 SAVEHIST=$HISTSIZE
 setopt appendhistory
 
+# Ignore duplicates
+setopt hist_ignore_all_dups
+
 ##########
 #
 # Miscellaneous settings
@@ -90,11 +93,13 @@ setopt nomatch
 
 # Disable beeps
 unsetopt beep
+unsetopt hist_beep
+unsetopt list_beep
 
 # Extended globbing
 setopt extendedglob 
 
-
+# Notify
 unsetopt notify
 
 # Bindkey
@@ -118,5 +123,15 @@ alias re='sudo reboot'
 alias cp='cp -v'
 alias mv='mv -v'
 alias rm='rm -v'
+
+##########
+#
+# Exports
+#
+####
+
+export EDITOR='vim'
+
+export PATH=$PATH
 
 # EOF
