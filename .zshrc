@@ -17,20 +17,42 @@
 ####
 
 # Enabling completion
-autoload -Uz compinit
+autoload -U compinit
 compinit
 
-#Completion styles
-zstyle ':completion:*' completer _complete _ignored _correct _approximate
-zstyle :compinstall filename '/home/thomas/.zshrc'
+# Autocompletion styles and improvements
+zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
+zstyle ':completion:*:warnings' format '%BNo results found for %d%b'
+zstyle ':completion:*' menu select=2
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 
-##########
-#
-# Command correction
-#
-####
+# Don't suggest elements which are already present while using rm, mv or cp
+zstyle ':completion:*:rm:*' ignore-line yes
+zstyle ':completion:*:mv:*' ignore-line yes
+zstyle ':completion:*:cp:*' ignore-line yes
 
-setopt correctall
+# Caching completion (useful for huge commands)
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh_cache
+
+# Improved kill
+zmodload zsh/complist
+setopt extendedglob
+zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=36=31"
+
+# Completion colors
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors 'reply=( "=(#b)(*$VAR)(?)*=00=$color[green]=$color[bg-green]" )'
+zstyle ':completion:*:*:*:*:hosts' list-colors '=*=30;41'
+zstyle ':completion:*:*:*:*:users' list-colors '=*=$color[green]=$color[red]'
+zstyle ':completion:*' list-colors ''
+
+# Non-case-sensitive completion
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}'
+
+# Ignore following files
+zstyle ':completion:*:*:(^rm):*:*files' ignored-patterns '*?.o' '*?.c~' \
+    '*?.old' '*?.pro'
 
 ##########
 #
@@ -72,7 +94,7 @@ unsetopt beep
 # Extended globbing
 setopt extendedglob 
 
-# Notify
+
 unsetopt notify
 
 # Bindkey
