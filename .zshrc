@@ -16,20 +16,67 @@
 #
 ####
 
+# Enabling completion
+autoload -Uz compinit
+compinit
+
+#Completion styles
 zstyle ':completion:*' completer _complete _ignored _correct _approximate
 zstyle :compinstall filename '/home/thomas/.zshrc'
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-# Lines configured by zsh-newuser-install
+##########
+#
+# Command correction
+#
+####
+
+setopt correctall
+
+##########
+#
+# Prompt
+#
+####
+
+autoload -U promtinit
+promptinit
+
+# PS1 environment variable
+
+##########
+#
+# History configuration
+#
+####
+
 HISTFILE=$HOME/.history
 HISTSIZE=1000
-SAVEHIST=1000
-setopt appendhistory autocd nomatch
-unsetopt beep extendedglob notify
+SAVEHIST=$HISTSIZE
+setopt appendhistory
+
+##########
+#
+# Miscellaneous settings
+#
+####
+
+# Auto cd
+setopt autocd 
+
+# No match
+setopt nomatch
+
+# Disable beeps
+unsetopt beep
+
+# Extended globbing
+setopt extendedglob 
+
+# Notify
+unsetopt notify
+
+# Bindkey
 bindkey -v
-# End of lines configured by zsh-newuser-install
 
 ##########
 #
@@ -49,3 +96,5 @@ alias re='sudo reboot'
 alias cp='cp -v'
 alias mv='mv -v'
 alias rm='rm -v'
+
+# EOF
