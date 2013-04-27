@@ -10,7 +10,7 @@
 !
 !!!!
 
-Urxvt.termNane: rxvt-256color
+URxvt.termNane: rxvt-unicode-256xresources
 
 ! Colors and fonts
 URxvt.background: rgba:2200/2200/2200/ffff

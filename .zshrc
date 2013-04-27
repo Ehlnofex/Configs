@@ -60,18 +60,44 @@ zstyle ':completion:*:*:(^rm):*:*files' ignored-patterns '*?.o' '*?.c~' \
 #
 ####
 
+# Initialize the prompt
+autoload -U promptinit
+promptinit
 
+# Show informations concerning versionning tools
+autoload -Uz vcs_info
 
+zstyle ':vcs_info:*' stagedstr '%F{green}●%f'
+zstyle ':vcs_info:*' unstagedstr '%F{yellow}●%f'
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{red}:%f%F{yellow}%r%f'
+zstyle ':vcs_info:*' enable git svn
 
+precmd () {
+if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
+zstyle ':vcs_info:*' formats '%F{cyan}[%b%c%u%f%F{cyan}]%f'
+} else {
+zstyle ':vcs_info:*' formats '%F{cyan}[%b%c%u%f%F{red}●%f%F{cyan}]%f'
+}
+vcs_info
+}
 
+# Versionning tool detection (NB: mercurial and svn are disabled)
+function prompt_char {
+git branch >/dev/null 2>/dev/null && echo '±' && return
+#hg root >/dev/null 2>/dev/null && echo '☿' && return
+#svn info >/dev/null 2>/dev/null && echo '⚡' && return
+echo '%#'
+}
 
+# Prompt extension
+setopt prompt_subst
 
+# Right side of the prompt (versionning tool infos)
+RPROMPT='%F{yellow}${vcs_info_msg_0_} %(!.%F{red}$(prompt_char)%f.$(prompt_char)) %F{white}'
 
-
-
-
-
-
+# Set the prompt
+prompt adam2 green white
 
 ############################
 # Prompt extension
