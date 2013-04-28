@@ -29,13 +29,14 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Bundles
-Bundle 'scrooloose/syntastic' 
 " syntax and error highlight
-Bundle 'altercation/vim-colors-solarized' 
+Bundle 'scrooloose/syntastic' 
 " colorscheme
-Bundle 'tpope/vim-fugitive' 
+Bundle 'altercation/vim-colors-solarized' 
 " Git 
-
+Bundle 'tpope/vim-fugitive' 
+" File explorer
+Bundle 'scrooloose/nerdtree'
 
 " Required
 filetype plugin indent on
@@ -86,9 +87,14 @@ autocmd FileType make setlocal noexpandtab
 "
 """"
 
+" Colorscheme
+syntax enable
+set background=dark
+colorscheme solarized
+
 " Syntax highlighting
 filetype plugin on
-syntax on
+"syntax on
 
 " Line numbering
 set number
