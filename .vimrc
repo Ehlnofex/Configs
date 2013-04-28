@@ -12,6 +12,31 @@
 
 """"""""""
 "
+" Bundles
+"
+""""
+
+" Be iMproved
+set nocompatible
+
+" Required
+filetype off
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" Let Vundle manage Vundle (required)
+Bundle 'gmarik/vundle'
+
+" Bundles
+
+
+
+" Required
+filetype plugin indent on
+
+""""""""""
+"
 " Editing behavior
 "
 """"
@@ -25,6 +50,9 @@ set ignorecase
 " Force encoding
 set encoding=utf-8
 
+" Auto reload file changed from the outside
+set autoread
+
 """"""""""
 "
 " Indentation specific configuraton
@@ -33,6 +61,7 @@ set encoding=utf-8
 
 " Autoindent
 set autoindent
+set smartindent
 
 " Tab lenght
 set tabstop=8
