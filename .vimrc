@@ -37,6 +37,10 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive' 
 " File explorer
 Bundle 'scrooloose/nerdtree'
+" Lines numbering
+Bundle 'myusuf3/numbers.vim'
+" Powerline
+Bundle 'Lokaltog/vim-powerline'
 
 " Required
 filetype plugin indent on
