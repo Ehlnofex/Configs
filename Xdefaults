@@ -1,0 +1,56 @@
+!!!!!!!!!!
+!  ______ _     _              __          
+!  |  ____| |   | |            / _|         
+!  | |__  | |__ | |_ __   ___ | |_ _____  __
+!  |  __| | '_ \| | '_ \ / _ \|  _/ _ \ \/ /
+!  | |____| | | | | | | | (_) | ||  __/>  < 
+!  |______|_| |_|_|_| |_|\___/|_| \___/_/\_\
+!                                                 
+! X defaults configuration file
+!
+!!!!
+
+URxvt.termNane: rxvt-unicode-256xresources
+
+! Colors and fonts
+URxvt.background: rgba:2200/2200/2200/ffff
+URxvt.foreground: White
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=13:antialias=true:hinting=true
+URxvt.boldFont: xft:DejaVu Sans Mono:bold:pixelsize=13:antialias=true:hinting=true
+
+! Scroll
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.scrollstyle: rxvt
+
+! Cursor
+URxvt.cursorBlink: false
+URxvt.cursorUnderline: true
+
+!colors:
+! mikado colors
+!black
+*color0:    #322a2c
+*color8:    #46423b
+!red
+*color1:    #a04363
+*color9:    #ae837a
+!green
+*color2:    #9b9329
+*color10:   #b4aa30
+!yellow
+!*color3:    #c77920
+*color3:    #bf7a29
+*color11:   #c7a551
+!blue
+*color4:    #6a8c8c
+*color12:   #74999e
+!magenta
+*color5:    #856774
+*color13:   #9c818e
+!cyan
+*color6:    #757978
+*color14:   #9fa590
+!white
+*color7:    #bcbcaf
+*color15:   #c1c4bc
