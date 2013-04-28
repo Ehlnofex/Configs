@@ -1,5 +1,2 @@
 # Vim swap files
 *.swp
-
-# gitignore
-.gitignore
