@@ -29,7 +29,12 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Bundles
-
+Bundle 'scrooloose/syntastic' 
+" syntax and error highlight
+Bundle 'altercation/vim-colors-solarized' 
+" colorscheme
+Bundle 'tpope/vim-fugitive' 
+" Git 
 
 
 " Required
