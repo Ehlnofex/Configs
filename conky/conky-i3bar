@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Tell i3bar the protocol we use (ie we use JSON)
+echo '{"version":1}'
+
+# Begin the endless array
+echo '['
+
+# Make loop simplier with an empty array
+echo '[],'
+
+# Send blocks of informations forever
+echo conky -c $HOME/.conkyrc
