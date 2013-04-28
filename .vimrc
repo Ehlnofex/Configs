@@ -21,6 +21,9 @@ set nocompatible
 
 " Required
 filetype off
+" Required for powerline
+set laststatus=2
+
 
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
@@ -108,3 +111,6 @@ set cursorline
 
 " Mark column number 80
 set cc=80 
+
+" Terminal supports 256 colors
+set t_Co=256
