@@ -84,9 +84,9 @@ vcs_info
 
 # Versionning tool detection (NB: mercurial and svn are disabled)
 function prompt_char {
-git branch >/dev/null 2>/dev/null && echo '±' && return
-#hg root >/dev/null 2>/dev/null && echo '☿' && return
-#svn info >/dev/null 2>/dev/null && echo '⚡' && return
+git branch >/dev/null 2>/dev/null && echo 'git' && return
+#hg root >/dev/null 2>/dev/null && echo 'hg' && return
+#svn info >/dev/null 2>/dev/null && echo 'svn' && return
 echo '%#'
 }
 
