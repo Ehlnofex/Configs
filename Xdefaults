@@ -10,6 +10,7 @@
 !
 !!!!
 
+! URxvt configurations
 URxvt.termNane: rxvt-unicode-256xresources
 
 ! Colors and fonts
@@ -27,7 +28,23 @@ URxvt.scrollstyle: rxvt
 URxvt.cursorBlink: false
 URxvt.cursorUnderline: true
 
-!colors:
+! XTerm configurations
+! Colors and fonts
+xterm*background: rgba:2200/2200/2200/ffff
+xterm*foreground: white
+xterm*font: xft:DejaVu Sans Mono:pixelsize=13:antialias=true:hinting=true
+xterm*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=13:antialias=true:hinting=true
+
+! Scroll
+xterm*scrollBar: false
+xterm*scrollBar_right: false
+xterm*scrollstyle: rxvt
+
+! Cursor
+xterm*cursorBlink: false
+xterm*cursorUnderline: true
+
+! Colors:
 ! mikado colors
 !black
 *color0:    #322a2c
