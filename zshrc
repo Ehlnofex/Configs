@@ -177,6 +177,7 @@ alias rm='rm -v'
 alias up='cd ..'
 
 alias svim='sudo vim'
+alias emacs='emacs -nw'
 
 ##########
 #
