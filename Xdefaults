@@ -29,20 +29,20 @@ URxvt.cursorBlink: false
 URxvt.cursorUnderline: true
 
 ! XTerm configurations
+XTerm*termName: xterm-256color
+XTerm*locale: true
+XTerm*metaSendEscape: true
+
 ! Colors and fonts
-xterm*background: rgba:2200/2200/2200/ffff
-xterm*foreground: white
+XTerm*background: rgb:220/220/220
+XTerm*foreground: white
 xterm*font: xft:DejaVu Sans Mono:pixelsize=13:antialias=true:hinting=true
 xterm*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=13:antialias=true:hinting=true
 
 ! Scroll
-xterm*scrollBar: false
-xterm*scrollBar_right: false
-xterm*scrollstyle: rxvt
+XTerm*saveLines: 1000
 
 ! Cursor
-xterm*cursorBlink: false
-xterm*cursorUnderline: true
 
 ! Colors:
 ! mikado colors
